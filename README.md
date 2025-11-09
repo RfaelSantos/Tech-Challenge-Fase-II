@@ -103,8 +103,8 @@ pip install -r requirements.txt
 
 ### Clonar o repositório
 ```bash
-git clone https://github.com/RfaelSantos/Tech-Challenge-Fase-I.git
-cd Tech-Challenge-Fase-I
+git clone https://github.com/RfaelSantos/Tech-Challenge-Fase-II.git
+cd Tech-Challenge-Fase-II
 ```
 
 ### Criar e ativar o ambiente virtual

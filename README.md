@@ -1,10 +1,10 @@
-# 📈 Análise Preditiva do Ibovespa — PósTech FIAP
+# Análise Preditiva do Ibovespa — PósTech FIAP
 
 > Projeto desenvolvido como parte da Pós-Graduação em **Data Analytics** da **FIAP**, com o objetivo de construir um modelo de **machine learning** capaz de prever a tendência diária do índice **Ibovespa**.
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 O desafio consiste em prever se o **fechamento do Ibovespa do dia seguinte** será **maior ou menor** que o do dia atual — ou seja, identificar a **tendência (↑ ou ↓)** com uma **acurácia mínima de 75%** em um conjunto de teste composto pelos **30 dias mais recentes**.
 
@@ -12,7 +12,7 @@ O modelo foi construído com base em **20 anos de dados históricos** e utiliza 
 
 ---
 
-## 🧠 Contexto e Motivação
+## Contexto e Motivação
 
 No mercado financeiro, mesmo uma **pequena vantagem estatística** pode significar a diferença entre **lucro e prejuízo**.  
 Este projeto buscou responder à pergunta:
@@ -23,14 +23,14 @@ Durante o processo, foram exploradas múltiplas abordagens para encontrar o equi
 
 ---
 
-## 🧩 Metodologia
+## Metodologia
 
-### 1️⃣ Coleta e Pré-processamento de Dados
+### Coleta e Pré-processamento de Dados
 - Fonte: Dados históricos do **Ibovespa** (20 anos).
 - Tratamento de valores ausentes, normalização e ordenação cronológica.
 - Criação de colunas derivadas para análise temporal.
 
-### 2️⃣ Engenharia de Atributos
+### Engenharia de Atributos
 Principais *features* utilizadas no modelo:
 - `Vol.` — Volume financeiro negociado  
 - `RSI` — Índice de força relativa (*momentum*)  
@@ -39,24 +39,24 @@ Principais *features* utilizadas no modelo:
 - `Price_vs_SMA30` — Distância do preço para a média móvel de 30 dias  
 - `MACD_Signal`, `RSI_Diff_3D`, `SP500_Lag_1` — indicadores de momentum e referência externa  
 
-### 3️⃣ Modelagem Preditiva
+### Modelagem Preditiva
 - Algoritmo principal: **LightGBM (LGBMClassifier)**  
 - Validação com **TimeSeriesSplit (5 folds)** respeitando a ordem temporal  
 - Otimização de hiperparâmetros com **GridSearchCV**  
 - Métricas analisadas: **Acurácia, Matriz de Confusão e Relatório de Classificação**
 
-### 4️⃣ Definição do Target
+### Definição do Target
 Para reduzir ruído, o alvo foi definido como:
 > Alta significativa = variação acima de **+0,5%** no fechamento do dia seguinte.  
 Isso permitiu focar em movimentos de mercado realmente relevantes.
 
 ---
 
-## 🤖 Resultados
+## Resultados
 
 | Métrica | Resultado |
 |----------|------------|
-| **Acurácia (teste)** | **83,3%** |
+| **Acurácia (teste)** | **80,0%** |
 | **Meta mínima** | 75% |
 | **Período de teste** | Últimos 30 dias |
 
@@ -70,7 +70,7 @@ O modelo não é uma “bola de cristal”, mas sim uma **ferramenta de apoio à
 
 ---
 
-## ⚙️ Stack Tecnológica
+## Stack Tecnológica
 
 | Categoria | Tecnologias |
 |------------|--------------|
@@ -82,20 +82,8 @@ O modelo não é uma “bola de cristal”, mas sim uma **ferramenta de apoio à
 
 ---
 
-## 📁 Estrutura do Projeto
 
-```
-📂 Tech-Challenge-Fase-I/
-├── 📄 Analise_ibovespa.ipynb       # Notebook principal com EDA e modelagem
-├── 📄 dados_processados.csv        # Base tratada (se aplicável)
-├── 📄 README.md                    # Documentação do projeto
-├── 📄 .gitignore                   # Arquivos e pastas ignorados
-└── 📁 data/                        # (opcional) Pasta de dados brutos
-```
-
----
-
-## 💻 Requisitos
+## Requisitos
 
 Crie um ambiente virtual e instale as dependências abaixo:
 
@@ -111,34 +99,34 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Como Executar o Projeto
+## Como Executar o Projeto
 
-### 1️⃣ Clonar o repositório
+### Clonar o repositório
 ```bash
 git clone https://github.com/RfaelSantos/Tech-Challenge-Fase-I.git
 cd Tech-Challenge-Fase-I
 ```
 
-### 2️⃣ Criar e ativar o ambiente virtual
+### Criar e ativar o ambiente virtual
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
 ```
 
-### 3️⃣ Instalar as dependências
+### Instalar as dependências
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Executar o notebook
+### Executar o notebook
 ```bash
 jupyter notebook Analise_ibovespa.ipynb
 ```
 
 ---
 
-## 📊 Visualizações
+## Visualizações
 
 O notebook contém diversas visualizações, incluindo:
 
@@ -155,7 +143,7 @@ jupyter nbconvert --to html Analise_ibovespa.ipynb
 
 ---
 
-## 🧭 Próximos Passos
+## Próximos Passos
 
 - Implementar **métricas financeiras adicionais** (ex: Sharpe Ratio, retorno simulado)  
 - Testar **modelos híbridos** (LightGBM + LSTM)  
@@ -164,7 +152,7 @@ jupyter nbconvert --to html Analise_ibovespa.ipynb
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 **Rafael Antunes dos Santos**  
 Analista de Dados | PósTech FIAP – Data Analytics  
@@ -174,7 +162,7 @@ Analista de Dados | PósTech FIAP – Data Analytics
 
 ---
 
-## 🏛️ Licença
+## Licença
 
 Este projeto é de uso educacional, desenvolvido no contexto da PósTech FIAP.  
 © 2025 Rafael Antunes dos Santos. Todos os direitos reservados.
